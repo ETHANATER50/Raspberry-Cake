@@ -6,8 +6,8 @@
 
 
 <?php
-$CurrentYear = 2020;
-echo "My footer - Copyright me " . $CurrentYear;
+$CurrentYear = 2022;
+echo "Rasberry Cake - Copyright Rasberry Cake " . $CurrentYear;
 ?>
 
 </body>

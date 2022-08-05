@@ -1,3 +1,13 @@
 ﻿body {
     background-color: yellow;
+    color :dodgerblue;
+    text-align: center;
+}
+
+div {
+    margin: auto;
+    background-color: dodgerblue;
+    color: red;
+    text-align: center;
+    width: 50%;
 }
