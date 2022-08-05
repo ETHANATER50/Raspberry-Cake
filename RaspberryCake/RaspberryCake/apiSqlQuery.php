@@ -23,7 +23,7 @@ if (array_key_exists("id", $_GET) == TRUE)
     if ($dataSet){
         // $myJSON = "[";
         if($row = mysqli_fetch_array($dataSet)) {
-            $myJSON = '[{"Id":"' . $row['id'] . '","Name":"' . $row['Name'] . '","Price":"' . $row['Price'] . '"]}';
+            $myJSON = '[{"Name":"' . $row['Name'] . '","Price":"' . $row['Price'] . '"}]';
         }
     }
     mysqli_close($myDbConn);

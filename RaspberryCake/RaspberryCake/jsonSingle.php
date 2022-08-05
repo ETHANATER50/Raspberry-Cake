@@ -11,11 +11,6 @@ include_once "MyHeader.php";
 
 <script>
    var request = new XMLHttpRequest();
-
-    //$(document).ready(function () {
-    //    // alert("Ready"); // Use for debugging
-
-    //});
     // ---------------------------------
     // Click event
     function myClickEvent() {
@@ -48,7 +43,7 @@ include_once "MyHeader.php";
         // Loop through each json record and create the HTML
         for (index in myData) {
             myReturn += "<tr><td>" + myData[index].Name + "</td><td>" +
-                myData[index].jPrice + "</td><td>";
+                myData[index].Price + "</td></tr>";
 
         }
         myReturn += "</table>";

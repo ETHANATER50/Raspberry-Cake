@@ -6,6 +6,8 @@ include_once "MyHeader.php";
 $myVar = "food";
 ?>
 
+<button name="a" onclick="myClickEvent()">Submit</button>
+
 <p id="A"></p>
 <p id="B"></p>
 
@@ -15,13 +17,12 @@ $myVar = "food";
 
     var request = new XMLHttpRequest();
 
-// Don't run until the page is loaded and ready
-    $(document).ready(function () {
-    // alert("Ready");
+    function myClickEvent() {
+        // alert("my click"); // Use for debugging
+        // alert("data: " + document.getElementById("personId").value); // Use for debugging
 
-    loadJson();
-    });
-
+        loadJson();
+    }
     // Call the microservice and get the data
     function loadJson() {
         request.open('GET', 'apiJsonQuery.php');
@@ -36,10 +37,13 @@ $myVar = "food";
         // create a table for display
         var myReturn = "<table><tr><td>Name &nbsp;  &nbsp; </td><td>Price &nbsp;  &nbsp; </td></tr>";
 
+
         myResponse = request.responseText;
+        console.log(myResponse);    
         //alert("A: " + myResponse); // Use for debug
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
+
 
         // Loop through each json record and create the HTML
         for (index in myData) {
