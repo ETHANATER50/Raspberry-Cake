@@ -8,12 +8,15 @@ $myVar = "food";
 
 <button name="a" onclick="myClickEvent()">Submit</button>
 
+<a href="Pages/CreatePage.php">Create</a> &nbsp; &nbsp;
+
 <p id="A"></p>
 <p id="B"></p>
 
 <p id="jsonData"></p>
 
 <script>
+
 
     var request = new XMLHttpRequest();
 
@@ -32,6 +35,7 @@ $myVar = "food";
 
     // Run when the data has been loaded
     function loadComplete(evt) {
+
         var myResponse;
         var myData;
         // create a table for display
@@ -39,8 +43,8 @@ $myVar = "food";
 
 
         myResponse = request.responseText;   
-        alert("A: " + myResponse); // Use for debug
-        document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
+        //alert("A: " + myResponse); // Use for debug
+        //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
 
 
