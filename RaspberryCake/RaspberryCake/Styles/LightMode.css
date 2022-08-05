@@ -4,5 +4,8 @@ table, th, td {
 
 .mycss {
 color: red;
+}
 
+body{
+    background-color: white;
 }
