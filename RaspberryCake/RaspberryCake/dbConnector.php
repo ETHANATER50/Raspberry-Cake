@@ -5,7 +5,7 @@
 //DEFINE ('DB_PSWD', 'talasIV');
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '10.0.115.12');
+DEFINE ('DB_SERVER', '10.0.0.12');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 // ///////////////////////////////////////////////////
@@ -35,7 +35,7 @@ function MyJoinJsonGet($dbConn) {
     $query = "SELECT JSON_OBJECT(
         'jName', pro.Name,
         'jPrice', pro.Price) as Json1
-        FROM Person pro;";
+        FROM Products pro;";
 
     return @mysqli_query($dbConn, $query);
 }

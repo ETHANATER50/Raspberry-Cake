@@ -38,10 +38,9 @@ $myVar = "food";
         var myReturn = "<table><tr><td>Name &nbsp;  &nbsp; </td><td>Price &nbsp;  &nbsp; </td></tr>";
 
 
-        myResponse = request.responseText;
-        console.log(myResponse);    
-        //alert("A: " + myResponse); // Use for debug
-        //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
+        myResponse = request.responseText;   
+        alert("A: " + myResponse); // Use for debug
+        document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
 
 

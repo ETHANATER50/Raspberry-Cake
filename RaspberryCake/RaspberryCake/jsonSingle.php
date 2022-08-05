@@ -42,7 +42,7 @@ include_once "MyHeader.php";
 
         // Loop through each json record and create the HTML
         for (index in myData) {
-            myReturn += "<tr><td>" + myData[index].Name + "</td><td>" +
+            myReturn += "<tr><td>" + myData[index].Name + "</td><td> $" +
                 myData[index].Price + "</td></tr>";
 
         }
