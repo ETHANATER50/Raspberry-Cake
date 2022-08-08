@@ -51,7 +51,9 @@ $myVar = "food";
         for (index in myData) {
             console.log(myData[index]);
             myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
-                myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?" + myData[index].jId + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?" + myData[index].jId + "'>Delete</a> </td>  </tr>";
+                myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?" +
+                myData[index].jId + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?" +
+                myData[index].jId + "'>Delete</a> </td>  </tr>";
 
         }
         myReturn += "</table>";
