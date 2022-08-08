@@ -40,13 +40,27 @@ $myVar = "food";
 
 
         // Loop through each json record and create the HTML
-        for (index in myData) {
+        session_start();
+        if ($_SESSION['valid'] == true)
+        {
+            for (index in myData) {
+                console.log(myData[index]);
+                myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
+                    myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?id=" +
+                    myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?id=" +
+                    myData[index].jId + "'>Delete</a> </td>  </tr>";
+
+            }
+        }
+        else
+        {
+            for (index in myData) {
             console.log(myData[index]);
             myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
                 myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?id=" +
-                myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?id=" +
-                myData[index].jId + "'>Delete</a> </td>  </tr>";
+                myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'></tr>";
 
+            }
         }
         myReturn += "</table>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table

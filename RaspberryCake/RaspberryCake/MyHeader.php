@@ -16,7 +16,6 @@ $myTitle = "Please Work"
 
 <br />
 <a href="Index.php">Home</a> &nbsp; &nbsp;<a href="jsonMulti.php">Multiple</a>  &nbsp; &nbsp;<a href="jsonSingle.php">Single</a>
-    <a href="/Pages/DeletePage.php">dleete</a>
 <h1>Put site menus here</h1>
     <br />
     <?php
