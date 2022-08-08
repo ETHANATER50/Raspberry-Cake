@@ -5,7 +5,7 @@ $url = $_SERVER['REQUEST_URI'];
 $url_components = parse_url($url);
 parse_str($url_components['query'], $params);
 
-echo $params['id'];
+$id = $params['id'];
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +13,7 @@ echo $params['id'];
 <body>
     <h1>Are you sure you want to delete this product?</h1>
     <form action="../Delete.php" method="post">
+        <input type="hidden" id="Id" name="id" value="<?php echo $id?>" />
         <p>
             <input type="submit" value="Delete" />
         </p>

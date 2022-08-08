@@ -2,7 +2,7 @@
 
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '169.254.80.192');
+DEFINE ('DB_SERVER', '10.10.15.39');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 
@@ -14,7 +14,7 @@ OR die('Failed to connect to MySQL ' . DB_SERVER . '::' . DB_NAME . ' : ' . mysq
 $Id = $_REQUEST['id'];
 
 
-$query = "DELETE FROM Products WHERE id = $Id";
+$query = "DELETE FROM `Products` WHERE `id`= $Id";
 mysqli_query($dbConn, $query);
 
 mysqli_close($dbConn);
