@@ -3,7 +3,7 @@
 
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '169.254.80.192');
+DEFINE ('DB_SERVER', '10.10.15.39');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 

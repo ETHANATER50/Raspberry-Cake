@@ -32,7 +32,6 @@ $myVar = "food";
         request.onload = loadComplete;
         request.send();
     }
-
     // Run when the data has been loaded
     function loadComplete(evt) {
 
@@ -50,8 +49,9 @@ $myVar = "food";
 
         // Loop through each json record and create the HTML
         for (index in myData) {
+            console.log(myData[index]);
             myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
-                myData[index].jPrice + "</td><td>";
+                myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?" + myData[index].jId + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?" + myData[index].jId + "'>Delete</a> </td>  </tr>";
 
         }
         myReturn += "</table>";
