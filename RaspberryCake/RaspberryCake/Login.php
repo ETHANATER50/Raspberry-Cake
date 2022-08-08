@@ -19,7 +19,7 @@ require "MyHeader.php";
             $_SESSION['valid'] = true;
             $_SESSION['timeout'] = time();
 
-            echo 'You have entered valid use name and password';
+            header("Refresh: 0; url=index.php");
         }else {
             $msg = 'Wrong username or password';
         }
