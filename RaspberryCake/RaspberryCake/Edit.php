@@ -1,5 +1,7 @@
 <?php
 
+include_once "MyHeader.php";
+
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
 DEFINE ('DB_SERVER', '169.254.80.192');
@@ -19,4 +21,11 @@ $query = "UPDATE Products SET name = '$name', price = '$price' WHERE id = $Id";
 mysqli_query($dbConn, $query);
 
 mysqli_close($dbConn);
+?>
+
+<h1>Product Successfully Updated!</h1>
+<button onclick="window.location.href='/jsonMulti.php'">Return To Main Page</button>
+
+<?php
+include_once "MyFooter.php";
 ?>

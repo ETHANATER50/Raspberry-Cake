@@ -1,5 +1,6 @@
 <?php
 
+include_once "MyHeader.php";
 
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
@@ -19,4 +20,12 @@ $query = "INSERT INTO Products (Name, Price) VALUES ('$name', '$price')";
 mysqli_query($dbConn, $query);
 
 mysqli_close($dbConn);
+?>
+
+
+<h1>Product Successfully Created!</h1>
+<button onclick="window.location.href='/jsonMulti.php'">Return To Main Page</button>
+
+<?php
+include_once "MyFooter.php";
 ?>
