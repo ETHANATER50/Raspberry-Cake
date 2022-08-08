@@ -1,5 +1,17 @@
 ﻿body {
-    background-color: black;
+    background-color: #202020;
+    color: whitesmoke;
+    text-align: center;
 }
 
+#body {
+    margin: auto;
+    background-color: #303030;
+    color: whitesmoke;
+    text-align: center;
+    width: 50%;
+}
 
+#image {
+    width: 500px;
+}

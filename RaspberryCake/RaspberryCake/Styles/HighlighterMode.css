@@ -4,10 +4,14 @@
     text-align: center;
 }
 
-div {
+tbody{
     margin: auto;
     background-color: dodgerblue;
     color: red;
     text-align: center;
     width: 50%;
+}
+
+#image {
+    width: 500px;
 }
