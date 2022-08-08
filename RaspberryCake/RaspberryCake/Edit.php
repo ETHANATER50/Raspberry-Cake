@@ -4,7 +4,7 @@ include_once "MyHeader.php";
 
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '169.254.80.192');
+DEFINE ('DB_SERVER', '10.10.15.39');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 
@@ -17,7 +17,7 @@ $Id = $_REQUEST['id'];
 $name = $_REQUEST['name'];
 $price = $_REQUEST['price'];
 
-$query = "UPDATE Products SET name = '$name', price = '$price' WHERE id = $Id";
+$query = "UPDATE `Products` SET `name` = '$name', `price` = '$price' WHERE `id`= $Id";
 mysqli_query($dbConn, $query);
 
 mysqli_close($dbConn);

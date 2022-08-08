@@ -6,8 +6,6 @@ include_once "MyHeader.php";
 $myVar = "food";
 ?>
 
-<button name="a" onclick="myClickEvent()">Submit</button>
-
 <a href="Pages/CreatePage.php">Create</a> &nbsp; &nbsp;
 
 <p id="A"></p>
@@ -19,13 +17,7 @@ $myVar = "food";
 
 
     var request = new XMLHttpRequest();
-
-    function myClickEvent() {
-        // alert("my click"); // Use for debugging
-        // alert("data: " + document.getElementById("personId").value); // Use for debugging
-
-        loadJson();
-    }
+    loadJson();
     // Call the microservice and get the data
     function loadJson() {
         request.open('GET', 'apiJsonQuery.php');
@@ -52,7 +44,7 @@ $myVar = "food";
             console.log(myData[index]);
             myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
                 myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?id=" +
-                myData[index].jId + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?id=" +
+                myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?id=" +
                 myData[index].jId + "'>Delete</a> </td>  </tr>";
 
         }
