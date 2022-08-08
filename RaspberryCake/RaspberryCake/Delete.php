@@ -1,6 +1,5 @@
 <?php
 
-
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
 DEFINE ('DB_SERVER', '169.254.80.192');
@@ -12,10 +11,10 @@ DEFINE ('DB_NAME', 'raspberryBakeryDB');
 $dbConn = @mysqli_connect(DB_SERVER, DB_USER, DB_PSWD, DB_NAME, 3306)
 OR die('Failed to connect to MySQL ' . DB_SERVER . '::' . DB_NAME . ' : ' . mysqli_connect_error()); // Display messge and end PHP script
 
-$name = $_REQUEST['name'];
-$price = $_REQUEST['price'];
+$Id = $_REQUEST['id'];
 
-$query = "INSERT INTO Products (Name, Price) VALUES ('$name', '$price')";
+
+$query = "DELETE FROM Products WHERE id = $Id";
 mysqli_query($dbConn, $query);
 
 mysqli_close($dbConn);
