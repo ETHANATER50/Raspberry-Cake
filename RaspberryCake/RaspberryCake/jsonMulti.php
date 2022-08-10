@@ -7,7 +7,19 @@ session_start();
 $myVar = "food";
 ?>
 
-<a href="Pages/CreatePage.php">Create</a> &nbsp; &nbsp;
+<p id="CreateId"></p>
+<script>
+        <?php
+        session_start();
+        ?>
+    var isAdmin = "<?php echo $_SESSION['valid'] ? true : false?>";
+    var Return = "";
+    if (isAdmin) {
+        Return = "<a href='Pages/CreatePage.php'>Create New Product</a> &nbsp; &nbsp";
+        document.getElementById("CreateId").innerHTML = Return;
+    }
+</script>
+
 
 <p id="A"></p>
 <p id="B"></p>
@@ -40,10 +52,7 @@ $myVar = "food";
         myData = JSON.parse(myResponse);
 
         // Loop through each json record and create the HTML
-        <?php
-        session_start();
-        ?>    
-        var isAdmin = "<?php echo $_SESSION['valid'] ? true : false?>";
+        
 
         if (isAdmin == true)
         {
@@ -52,7 +61,8 @@ $myVar = "food";
                 myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
                     myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?id=" +
                     myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'>Edit</a> </td> <td> <a href='Pages/DeletePage.php?id=" +
-                    myData[index].jId + "'>Delete</a> </td>  </tr>";
+                    myData[index].jId + "'>Delete</a> </td> <td> <a href='jsonSingle.php?id=" +
+                    myData[index].jId + "'>View</a></td>  </tr>";
 
             }
         }
@@ -62,7 +72,8 @@ $myVar = "food";
             console.log(myData[index]);
             myReturn += "<tr><td>" + myData[index].jName + "</td><td>" +
                 myData[index].jPrice + "</td> <td> <a href='Pages/EditPage.php?id=" +
-                myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'></tr>";
+                myData[index].jId + "&name=" + myData[index].jName + "&price=" + myData[index].jPrice + "'> </td> <td> <a href='jsonSingle.php?id=" +
+                myData[index].jId + "'>View</a></td>  </tr>";
 
             }
         }

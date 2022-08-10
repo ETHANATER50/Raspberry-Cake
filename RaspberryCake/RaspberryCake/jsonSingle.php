@@ -2,23 +2,25 @@
 include_once "MyHeader.php";
 ?>
 
-    Input a person index (int): &nbsp;
-    <input type="text" id="id" value="1"/>
-    <button name="a" onclick="myClickEvent()">Submit</button>
-<input type="submit" name="sgs" value="Click me" />
 <p id="A"></p>
 <p id="jsonData"></p>
 
 <script>
+    <?php
+    $url = $_SERVER['REQUEST_URI'];
+    $url_components = parse_url($url);
+    parse_str($url_components['query'], $params);
+
+    $id = $params['id'];
+    ?>
+
    var request = new XMLHttpRequest();
     // ---------------------------------
     // Click event
-    function myClickEvent() {
          // alert("my click"); // Use for debugging
         // alert("data: " + document.getElementById("personId").value); // Use for debugging
 
-        loadJson(document.getElementById("id").value);
-    }
+    loadJson(<?php echo $id ?>);
     // ---------------------------------
             // Call the microservice and get the data
     function loadJson(id) {
@@ -54,5 +56,6 @@ include_once "MyHeader.php";
 </script>
 
 <?php
+echo "Want to purchase this product? Check out our contact page and place an order with us!";
 include_once "MyFooter.php";
 ?>
