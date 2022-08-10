@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.32602.291
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "RaspberryCake", "RaspberryCake.phpproj", "{AFD8D027-5E23-4AC1-AF1C-0A270E7FD90A}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {89B448FB-1D30-417A-B66F-76B7B421E36E}
+		SolutionGuid = {9ACB9F46-0746-4E17-8DAB-067C2BB13494}
 	EndGlobalSection
 EndGlobal
