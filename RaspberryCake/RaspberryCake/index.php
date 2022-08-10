@@ -8,21 +8,36 @@ require "MyHeader.php";
 <html>
 
 <?php
-
-$css = "Styles/DarkMode.css";
+$stylesheet =  'Light';
 
 function ClickDark() {
-    echo $css = "Styles/LightMode.css";
+    echo $stylesheet = 'Dark';
 }
 function ClickLight() {
-    echo $css = "Styles/DarkMode.css";
+    echo $stylesheet = 'Light';
 }
 function ClickBright() {
-    echo $css = "Styles/HighlighterMode.css";
+    echo $stylesheet = 'Bright';
 }
+
+switch($stylesheet) {
+    case 'Bright':
+        $style = "Styles/HighlighterMode.css";
+        break;
+    case 'Dark':
+        $style = "Styles/DarkMode.css";
+        break;
+    case 'Light':
+        $style = "Styles/LightMode.css";
+        break;
+    default:
+        $style = "Styles/LightMode.css";
+        break;
+}
+echo '<link rel="stylesheet" type="text/css" href="'.$style.'">';
 ?>
     <head>
-        <link rel="stylesheet" href=<?php echo $css ?> />
+        <!--<link rel="stylesheet" href=/>-->
     </head>
     <body>
         <div>
