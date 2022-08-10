@@ -1,5 +1,6 @@
 <?php
 include_once "MyHeader.php";
+session_start();
 ?>
 
 <?php
@@ -38,10 +39,13 @@ $myVar = "food";
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
 
-
         // Loop through each json record and create the HTML
+        <?php
         session_start();
-        if ($_SESSION['valid'] == true)
+        ?>    
+        var isAdmin = "<?php echo $_SESSION['valid'] ? true : false?>";
+
+        if (isAdmin == true)
         {
             for (index in myData) {
                 console.log(myData[index]);
