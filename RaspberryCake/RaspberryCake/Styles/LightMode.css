@@ -10,6 +10,7 @@ body {
     color: black;
     text-align: center;
     width: 50%;
+    border-radius:10px;
 }
 
 #image {

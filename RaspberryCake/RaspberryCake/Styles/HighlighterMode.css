@@ -4,12 +4,13 @@
     text-align: center;
 }
 
-tbody{
+#body {
     margin: auto;
     background-color: dodgerblue;
     color: red;
     text-align: center;
     width: 50%;
+    border-radius: 10px;
 }
 
 #image {
