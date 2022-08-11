@@ -4,7 +4,6 @@ require "MyHeader.php";
 
 <br />
 <!DOCTYPE html>
-
 <html>
 
     <head>
@@ -22,7 +21,6 @@ require "MyHeader.php";
     </div>
     </body>
 </html>
-
 <?php
 require "MyFooter.php";
 ?>

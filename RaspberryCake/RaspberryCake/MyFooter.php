@@ -6,8 +6,8 @@
 
 
 <?php
-$CurrentYear = 2022;
-echo "Rasberry Cake - Copyright Rasberry Cake " . $CurrentYear;
+$CurrentYear = 2020;
+echo "Raspberry Bakery - Copyright The Raspberry Guys " . $CurrentYear;
 ?>
 
 </body>
