@@ -22,11 +22,16 @@ if(array_key_exists("style", $_GET)==true)
 }
 require "MyHeader.php";
 ?>
-<a href="Session.php?style=Dark">Dark</a>
 <br />
-<a href="Session.php?style=Light">Light</a>
 <br />
-<a href="Session.php?style=Bright">Bright</a>
+<button onclick="window.location.href='Session.php?style=Dark'" class="button-85">Dark Mode</button>
+<br />
+<br />
+<button onclick="window.location.href='Session.php?style=Light'" class="button-85">Light Mode</button>
+<br />
+<br />
+<button onclick="window.location.href='Session.php?style=Bright'" class="button-85">Bright Mode</button>
+<br />
 <br />
 
 <?php

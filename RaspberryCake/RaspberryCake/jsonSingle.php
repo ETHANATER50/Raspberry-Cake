@@ -1,7 +1,7 @@
 <?php
 include_once "MyHeader.php";
 ?>
-
+<div id="body">
 <p id="A"></p>
 <p id="jsonData"></p>
 
@@ -35,7 +35,7 @@ include_once "MyHeader.php";
         var myResponse;
         var myData;
         // create a table for display
-        var myReturn = "<table><tr><td>Name &nbsp;  &nbsp; </td><td>Price &nbsp;  &nbsp; </td></tr>";
+        var myReturn = "<table align='center'><tr><td><h1>Name &nbsp;  &nbsp; </h1></td><td><h1>Price &nbsp;  &nbsp; </h1></td></tr>";
 
         myResponse = request.responseText;
         //alert("A: " + myResponse); // Use for debug
@@ -44,8 +44,8 @@ include_once "MyHeader.php";
 
         // Loop through each json record and create the HTML
         for (index in myData) {
-            myReturn += "<tr><td>" + myData[index].Name + "</td><td> $" +
-                myData[index].Price + "</td></tr>";
+            myReturn += "<tr><td><h1>" + myData[index].Name + "</h1></td><td><h1> $" +
+                myData[index].Price + "</h1></td></tr>";
 
         }
         myReturn += "</table>";
@@ -54,8 +54,9 @@ include_once "MyHeader.php";
 
 
 </script>
+</div>
+<h1>"Want to purchase this product? Check out our contact page and place an order with us!"</h1>
 
 <?php
-echo "Want to purchase this product? Check out our contact page and place an order with us!";
 include_once "MyFooter.php";
 ?>

@@ -4,7 +4,7 @@ include_once "MyHeader.php";
 
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '10.10.15.44');
+DEFINE ('DB_SERVER', '10.0.0.12');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 
@@ -23,8 +23,8 @@ mysqli_close($dbConn);
 ?>
 
 
-<h1>Product Successfully Delete!</h1>
-<button onclick="window.location.href='/jsonMulti.php'">Return To Main Page</button>
+<h1>Product Successfully Deleted!</h1>
+<button onclick="window.location.href='/jsonMulti.php'" class="button-85">Return To Main Page</button>
 
 <?php
 include_once "MyFooter.php";

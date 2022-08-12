@@ -8,5 +8,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
 </Project>

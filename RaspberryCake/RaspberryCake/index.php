@@ -11,13 +11,16 @@ require "MyHeader.php";
     </head>
     <body>
         <div id="body">
-            <h1>This is sample text untill I get creative and figure out what I want to actutally write but untill then here is Cave Johnson''s lemon rant.</h1>
+            <h1>Welcome To The Raspberry Bakery!</h1>
+            <h2>It's our mission to create the perfect raspberry taste! Join us in our journey into raspberry nirvana!</h2>
             <img src="Images/1.png" alt="2" id="image"/>
 
-            <p>
-                All right, I've been thinking, when life gives you lemons, don't make lemonade! Make life take the lemons back! Get mad! I don't want your damn lemons! What am I supposed to do with these? Demand to see life's manager!
-                Make life rue the day it thought it could give Cave Johnson lemons! Do you know who I am? I'm the man whose gonna burn your house down - with the lemons!
-            </p>
+            <b>
+                <p>Bear witness to one of our most beautiful creations: The Raspberry Cookie!</p>
+                <p>Complete with our stamp of approval!</p>
+            </b>
+            <br />
+            <br />
     </div>
     </body>
 </html>

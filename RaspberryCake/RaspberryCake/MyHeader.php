@@ -2,7 +2,7 @@
 
 <?php
 session_start(); // Must be first, prior to any HTML. Session will expire
-$myTitle = "Please Work"
+$myTitle = "Raspberry Bakery"
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +48,7 @@ echo '<link rel="stylesheet" type="text/css" href="'.$style.'">';
 
 
 ?>
-<a href="Index.php">Home</a> &nbsp; &nbsp;<a href="jsonMulti.php">Products</a> &nbsp; &nbsp; <a href="AboutPage.php">About us</a> &nbsp; &nbsp; <a href="ContactPage.php">Contact Us!</a> &nbsp; &nbsp; <a href="Session.php">Style</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href= <?php echo $url?>><?php echo $text?></a>
+    <!--Yes the tons of &nbsp; is a joke we decided to keep in. We know there is a better way to do it.-->
+<button onclick="window.location.href='Index.php'" class="button-85">Home</button> &nbsp; &nbsp;<button onclick="window.location.href='jsonMulti.php'" class="button-85">Products</button> &nbsp; &nbsp; <button onclick="window.location.href='AboutPage.php'" class="button-85">About us</button> &nbsp; &nbsp; <button onclick="window.location.href='ContactPage.php'" class="button-85">Contact Us!</button> &nbsp; &nbsp; <button onclick="window.location.href='Session.php'" class="button-85">Style</button>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button class="button-85" onclick="window.location.href='<?php echo $url?>'"><?php echo $text?></button>
     <br />
     <br />

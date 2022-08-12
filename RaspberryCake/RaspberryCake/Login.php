@@ -4,7 +4,7 @@ require "MyHeader.php";
 
 <br />
 <br />
-<h2>Enter Username and Password</h2>
+<h1>Enter Username and Password</h1>
 <div class="container form-signin">
 
     <?php
@@ -34,11 +34,17 @@ require "MyHeader.php";
         <h4 class="form-signin-heading">
             <?php echo $msg; ?>
         </h4>
+        <br />
+        <br />
         <input type="text" class="form-control"
             name="username" placeholder="username"
-            required autofocus /><br />
+            required autofocus />
+        <br />
+        <br />
         <input type="password" class="form-control"
             name="password" placeholder="password" required />
+        <br />
+        <br />
         <button class="btn btn-lg btn-primary btn-block" type="submit"
             name="login">
             Login
