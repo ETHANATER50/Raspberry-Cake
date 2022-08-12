@@ -16,7 +16,7 @@ $id = $params['id'];
             <input type="submit" value="Delete" class="button-85" />
         </p>
     </form>
-    <button onclick="window.location.href='/jsonMulti.php'" class="button-85">Back</button>
+    <button onclick="window.location.href='jsonMulti.php'" class="button-85">Back</button>
 </body>
 
 <?php

@@ -24,7 +24,7 @@ mysqli_close($dbConn);
 
 
 <h1>Product Successfully Created!</h1>
-<button onclick="window.location.href='/jsonMulti.php'" class="button-85">Return To Main Page</button>
+<button onclick="window.location.href='jsonMulti.php'" class="button-85">Return To Main Page</button>
 
 <?php
 require "MyFooter.php";
