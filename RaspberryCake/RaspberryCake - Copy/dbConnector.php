@@ -5,7 +5,7 @@
 //DEFINE ('DB_PSWD', 'talasIV');
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '10.0.115.13');
+DEFINE ('DB_SERVER', '10.10.15.38');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 // ///////////////////////////////////////////////////
@@ -22,9 +22,11 @@ function ConnGet() {
 // Get one record
 function MyJoinWhereGet($dbConn, $id) {
 
-    $query = "SELECT pro.Name, pro.Price
-   FROM Products pro
-    where pro.id = " . $id . " limit 1;";
+    $query = "SELECT que.Category, que.Question, que.Score
+             que.CorrectAnswer, que.IncorrectAnswer1, que.IncorrectAnswer2,
+             que.IncorrectAnswer3, que.imageLink
+   FROM Question que
+    where que.id = " . $id . " limit 1;";
 
     return @mysqli_query($dbConn, $query);
 }
@@ -33,10 +35,15 @@ function MyJoinWhereGet($dbConn, $id) {
 function MyJoinJsonGet($dbConn) {
 
     $query = "SELECT JSON_OBJECT(
-        'jId', pro.Id,
-        'jName', pro.Name,
-        'jPrice', pro.Price) as Json1
-        FROM Products pro;";
+        'jId', que.Id,
+        'jCategory', que.Category,
+        'jScore', que.Score,
+        'jCorrectAnswer', que.CorrectAnswer,
+        'jIncorrectAnswer1', que.IncorrectAnswer1,
+        'jIncorrectAnswer2', que.IncorrectAnswer2,
+        'jIncorrectAnswer3', que.IncorrectAnswer3,
+        'jImageLink', que.imageLink) as Json1
+        FROM Question que;";
 
     return @mysqli_query($dbConn, $query);
 }
