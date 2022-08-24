@@ -5,8 +5,8 @@
 //DEFINE ('DB_PSWD', 'talasIV');
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '10.10.15.38');
-DEFINE ('DB_NAME', 'raspberryBakeryDB');
+DEFINE ('DB_SERVER', '10.10.15.24');
+DEFINE ('DB_NAME', 'raspberryJeopardy');
 
 // ///////////////////////////////////////////////////
 // Get db connection
@@ -22,9 +22,9 @@ function ConnGet() {
 // Get one record
 function MyJoinWhereGet($dbConn, $id) {
 
-    $query = "SELECT que.Category, que.Question, que.Score
+    $query = "SELECT que.Category, que.Question, que.Score,
              que.CorrectAnswer, que.IncorrectAnswer1, que.IncorrectAnswer2,
-             que.IncorrectAnswer3, que.imageLink
+             que.IncorrectAnswer3
    FROM Question que
     where que.id = " . $id . " limit 1;";
 

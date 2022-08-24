@@ -15,10 +15,6 @@ $myVar = "food";
         ?>
     var isAdmin = "<?php echo $_SESSION['valid'] ? true : false?>";
     var Return = "";
-    if (isAdmin) {
-        Return = "<a href='CreatePage.php' class='button-85'>Create New Product</a> &nbsp; &nbsp";
-        document.getElementById("CreateId").innerHTML = Return;
-    }
 </script>
 <br />
 
@@ -45,7 +41,7 @@ $myVar = "food";
         var myResponse;
         var myData;
         // create a table for display
-        var myReturn = "<table align='center'><tr><td><h1>Name</h1> &nbsp;  &nbsp; </td><td><h1>Price</h1> &nbsp;  &nbsp; </td></tr>";
+        var myReturn = "<table align='center'><tr>";
 
 
         myResponse = request.responseText;   
@@ -55,15 +51,14 @@ $myVar = "food";
 
         // Loop through each json record and create the HTML
         
-        var randomFacts;
-        var lifeFacts;
-        var whyBrysonIsShort;
-        var splatoonLore;
-        var jeopardy;
+        var randomFacts = [];
+        var lifeFacts = [];
+        var whyBrysonIsShort = [];
+        var splatoonLore = [];
+        var jeopardy = [];
 
         for (index in myData) {
-            console.log(myData[index]);
-            switch (myData[index].Category) {
+            switch (myData[index].jCategory) {
                 case "Random Facts":
                     randomFacts.push(myData[index]);
                     break;
@@ -82,28 +77,29 @@ $myVar = "food";
             }
         }
 
+        myReturn += "<td><h1>Random Facts</h1></td>"
         for (index in randomFacts) {
-            myReturn += "<tr><td><h1>" + randomFacts[index].Category + "</h1></td><td><h1>" +
-            randomFacts[index].Score + "</h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + randomFacts[index].jId + "'>" + randomFacts[index].jScore + "</a></h1></td></tr>";
         }
+        myReturn += "<td><h1>Life Facts</h1></td>"
         for (index in lifeFacts) {
-            myReturn += "<tr><td><h1>" + lifeFacts[index].Category + "</h1></td><td><h1>" +
-            lifeFacts[index].Score + "</h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + lifeFacts[index].jId + "'>" + lifeFacts[index].jScore + "</a></h1></td></tr>";
         }
+        myReturn += "<td><h1>Why Bryson Is Short</h1></td>"
         for (index in whyBrysonIsShort) {
-            myReturn += "<tr><td><h1>" + whyBrysonIsShort[index].Category + "</h1></td><td><h1>" +
-            whyBrysonIsShort[index].Score + "</h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + whyBrysonIsShort[index].jId + "'>" + whyBrysonIsShort[index].jScore + "</a></h1></td></tr>";
         }
+        myReturn += "<td><h1>Splatoon Lore</h1></td>"
         for (index in splatoonLore) {
-            myReturn += "<tr><td><h1>" + splatoonLore[index].Category + "</h1></td><td><h1>" +
-            splatoonLore[index].Score + "</h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + splatoonLore[index].jId + "'>" + splatoonLore[index].jScore + "</a></h1></td></tr>";
         }
+        myReturn += "<td><h1>Jeopardy</h1></td>"
         for (index in jeopardy) {
-            myReturn += "<tr><td><h1>" + jeopardy[index].Category + "</h1></td><td><h1>" +
-            jeopardy[index].Score + "</h1></td></tr>";
+            myReturn += "<td><h1><a href='jsonSingle.php?id=" + myData[index].jId + "'>" + jeopardy[index].jScore + "</a></h1></td></tr>";
         }
         myReturn += "</table>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
+        console.log(document.getElementById("jsonData").innerHTML);
 }
 
 </script>
