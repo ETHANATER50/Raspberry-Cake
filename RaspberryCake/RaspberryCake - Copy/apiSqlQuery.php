@@ -23,7 +23,7 @@ if (array_key_exists("id", $_GET) == TRUE)
     if ($dataSet){
         // $myJSON = "[";
         if($row = mysqli_fetch_array($dataSet)) {
-            $myJSON = '[{"Name":"' . $row['Name'] . '","Price":"' . $row['Price'] . '"}]';
+            $myJSON = '[{"Category":"' . $row['Category'] . '","Question":"' . $row['Question'] . '","Score":"' . $row['Score'] . '","CorrectAnswer":"' . $row['CorrectAnswer'] . '","IncorrectAnswer1":"' . $row['IncorrectAnswer1'] . '","IncorrectAnswer2":"' . $row['IncorrectAnswer2'] . '","IncorrectAnswer3":"' . $row['IncorrectAnswer3'] . '"}]';
         }
     }
     mysqli_close($myDbConn);

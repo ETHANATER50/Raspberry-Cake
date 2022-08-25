@@ -4,7 +4,7 @@ include_once "MyHeader.php";
 
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '10.10.15.24');
+DEFINE ('DB_SERVER', '10.0.0.12');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 

@@ -24,6 +24,7 @@ include_once "MyHeader.php";
     // ---------------------------------
             // Call the microservice and get the data
     function loadJson(id) {
+        console.log("Hit load json");
         // alert("id: " + id); // Use for debugging
         request.open('GET', 'apiSqlQuery.php?id=' + id);
         request.onload=loadComplete;
@@ -31,6 +32,7 @@ include_once "MyHeader.php";
     }
 
     function shuffle(array) {
+        console.log("Shuffled Array");
         let currentIndex = array.length, randomIndex;
 
         // While there remain elements to shuffle.
@@ -52,18 +54,21 @@ include_once "MyHeader.php";
     const answers = [];
 
     function checkAnswer(string) {
+        console.log("Correct Answer: " + correctAnswer);
+        console.log("Given Answer: " + string);
         if (string === correctAnswer) {
             /*add points*/
             console.log('you did it');
+            location.href = "jsonMulti.php";
         }
         else {
             console.log('you FOOL');
         }
     }
-}
 
         // Run when the data has been loaded
     function loadComplete(evt) {
+        console.log("Hit load complete");
         var myResponse;
         var myData;
         
@@ -75,23 +80,19 @@ include_once "MyHeader.php";
         var myReturn = "<table align='center'><tr><td><h1>Question</h1></td></tr><tr><td><h2>What is...<h2></td></tr>"
 
         myResponse = request.responseText;
+        console.log("After setting my response");
         //alert("A: " + myResponse); // Use for debug
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
-
-        // Loop through each json record and create the HTML
-        for (let i = 4; i < 8; i++) {
-            //myReturn += "<tr><td><h1>" + myData[index].Name + "</h1></td><td><h1> $" +
-            //    myData[index].Price + "</h1></td></tr>";
-            if (i = 4) {
-                correctAnswer = myData[i];
-            }
-            answers.push(myData[i]);
-        }
-
+        console.log("After setting my data");
+        correctAnswer = myData[0].CorrectAnswer;
+        answers.push(myData[0].CorrectAnswer);
+        answers.push(myData[0].IncorrectAnswer1);
+        answers.push(myData[0].IncorrectAnswer2);
+        answers.push(myData[0].IncorrectAnswer3);
         shuffle(answers);
 
-        myReturn += "<tr><td><button onclick='checkAnswer(this.value)'>" + answers[0] + "</button></td><td><button onclick='checkAnswer(this.value)'>" + answers[1] + "</button></td></tr><tr><td><button onclick='checkAnswer(this.value)'>" + answers[2] + "</button></td><td><button onclick='checkAnswer(this.value)'>" + answers[3] + "</button></td></tr></table > ";
+        myReturn += "<tr><td><button value='" + answers[0] + "' onclick='checkAnswer(this.value)'>" + answers[0] + "</button></td><td><button value='" + answers[1] + "' onclick='checkAnswer(this.value)'>" + answers[1] + "</button></td></tr><tr><td><button value='" + answers[2] + "' onclick='checkAnswer(this.value)'>" + answers[2] + "</button></td><td><button value='" + answers[3] + "' onclick='checkAnswer(this.value)'>" + answers[3] + "</button></td></tr></table > ";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }
 
