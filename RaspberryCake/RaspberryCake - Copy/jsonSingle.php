@@ -60,6 +60,10 @@ include_once "MyHeader.php";
         console.log("Given Answer: " + string);
         if (string === correctAnswer) {
             /*add points*/
+            <?php
+            session_start();
+            $_SESSION['score'] += $Score;
+            ?>
             console.log('you did it');
             getElementById('showAnswer').innerHTML = "That is correct!";
             location.href = "jsonMulti.php";
