@@ -5,7 +5,7 @@
 //DEFINE ('DB_PSWD', 'talasIV');
 DEFINE ('DB_USER', 'phpa');
 DEFINE ('DB_PSWD', 'Eivor19*');
-DEFINE ('DB_SERVER', '10.0.115.13');
+DEFINE ('DB_SERVER', '10.0.0.12');
 DEFINE ('DB_NAME', 'raspberryBakeryDB');
 
 // ///////////////////////////////////////////////////
