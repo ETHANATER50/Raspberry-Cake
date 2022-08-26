@@ -64,13 +64,13 @@ include_once "MyHeader.php";
             session_start();
             $_SESSION['score'] += $Score;
             ?>
-            console.log('you did it');
             getElementById('showAnswer').innerHTML = "That is correct!";
+            setTimeout(1000);
             location.href = "jsonMulti.php";
         }
         else {
-            console.log('you FOOL');
             getElementById('showAnswer').innerHTML = "That is incorrect! The correct answer was" + correctAnswer;
+            setTimeout(1000);
             location.href = "jsonMulti.php";
         }
     }
