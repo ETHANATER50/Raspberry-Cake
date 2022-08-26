@@ -4,6 +4,7 @@ include_once "MyHeader.php";
 <div id="body">
 <p id="A"></p>
 <p id="jsonData"></p>
+<h1 id="showAnswer"></h1>
 
 <script>
     <?php
@@ -12,6 +13,7 @@ include_once "MyHeader.php";
     parse_str($url_components['query'], $params);
 
     $id = $params['id'];
+    $Score = $params['score'];
     ?>
 
    var request = new XMLHttpRequest();
@@ -55,9 +57,12 @@ include_once "MyHeader.php";
         if (string === correctAnswer) {
             /*add points*/
             console.log('you did it');
+            getElementById('showAnswer').innerHTML = "That is correct!";
         }
         else {
             console.log('you FOOL');
+            getElementById('showAnswer').innerHTML = "That is incorrect! The correct answer was" + correctAnswer;
+
         }
     }
 }
