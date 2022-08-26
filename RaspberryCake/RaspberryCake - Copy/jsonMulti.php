@@ -24,6 +24,10 @@ $myVar = "food";
 
 <p id="jsonData"></p>
 
+<!--Player score goes here-->
+<h1><?php echo $_SESSION['score']?></h1>
+
+
 <script>
 
 
