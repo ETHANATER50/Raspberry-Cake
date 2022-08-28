@@ -49,6 +49,6 @@ echo '<link rel="stylesheet" type="text/css" href="'.$style.'">';
 
 ?>
     <!--Yes the tons of &nbsp; is a joke we decided to keep in. We know there is a better way to do it.-->
-<button onclick="window.location.href='Index.php'" class="button-85">Home</button> &nbsp; &nbsp;<button onclick="window.location.href='jsonMulti.php'" class="button-85">Products</button> &nbsp; &nbsp; <button onclick="window.location.href='AboutPage.php'" class="button-85">About us</button> &nbsp; &nbsp; <button onclick="window.location.href='ContactPage.php'" class="button-85">Contact Us!</button> &nbsp; &nbsp; <button onclick="window.location.href='Session.php'" class="button-85">Style</button>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button class="button-85" onclick="window.location.href='<?php echo $url?>'"><?php echo $text?></button>
+<button onclick="window.location.href='Index.php'" class="button-85">Jeopardy Home</button> &nbsp; &nbsp;<button onclick="window.location.href='jsonMulti.php'" class="button-85">Game</button>
     <br />
     <br />

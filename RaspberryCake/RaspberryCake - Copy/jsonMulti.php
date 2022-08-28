@@ -23,9 +23,10 @@ $myVar = "food";
 <p id="B"></p>
 
 <p id="jsonData"></p>
+<button onclick='resetScore()'>Reset</button>
 
 <!--Player score goes here-->
-<h1><?php echo $_SESSION['score']?></h1>
+<h1>Score: <?php echo $_SESSION['score']?></h1>
 
 
 <script>
@@ -39,6 +40,12 @@ $myVar = "food";
         request.onload = loadComplete;
         request.send();
     }
+
+    function resetScore() {
+        <?php $_SESSION['score'] = 0 ?>;
+        location.href = "jsonMulti.php";
+    }
+
     // Run when the data has been loaded
     function loadComplete(evt) {
 
@@ -83,23 +90,23 @@ $myVar = "food";
 
         myReturn += "<td><h1>Random Facts</h1></td>"
         for (index in randomFacts) {
-            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + randomFacts[index].jId + "'>" + randomFacts[index].jScore + "</a></h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + randomFacts[index].jId + "&score=" + randomFacts[index].jScore + "'>" + randomFacts[index].jScore + "</a></h1></td></tr>";
         }
         myReturn += "<td><h1>Life Facts</h1></td>"
         for (index in lifeFacts) {
-            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + lifeFacts[index].jId + "'>" + lifeFacts[index].jScore + "</a></h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + lifeFacts[index].jId + "&score=" + lifeFacts[index].jScore + "'>" + lifeFacts[index].jScore + "</a></h1></td></tr>";
         }
         myReturn += "<td><h1>Why Bryson Is Short</h1></td>"
         for (index in whyBrysonIsShort) {
-            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + whyBrysonIsShort[index].jId + "'>" + whyBrysonIsShort[index].jScore + "</a></h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + whyBrysonIsShort[index].jId + "&score=" + whyBrysonIsShort[index].jScore + "'>" + whyBrysonIsShort[index].jScore + "</a></h1></td></tr>";
         }
         myReturn += "<td><h1>Splatoon Lore</h1></td>"
         for (index in splatoonLore) {
-            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + splatoonLore[index].jId + "'>" + splatoonLore[index].jScore + "</a></h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + splatoonLore[index].jId + "&score=" + splatoonLore[index].jScore + "'>" + splatoonLore[index].jScore + "</a></h1></td></tr>";
         }
         myReturn += "<td><h1>Jeopardy</h1></td>"
         for (index in jeopardy) {
-            myReturn += "<td><h1><a href='jsonSingle.php?id=" + myData[index].jId + "'>" + jeopardy[index].jScore + "</a></h1></td></tr>";
+            myReturn += "<tr><td><h1><a href='jsonSingle.php?id=" + myData[index].jId + "&score=" + jeopardy[index].jScore +  "'>" + jeopardy[index].jScore + "</a></h1></td></tr>";
         }
         myReturn += "</table>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table

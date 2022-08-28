@@ -1,20 +1,29 @@
 body {
-    background-color: white;
-    color: black;
+    background-color: #0003FF;
+    color: whitesmoke;
     text-align: center;
 }
 
 #body {
     margin: auto;
-    background-color: lightgrey;
-    color: black;
+    background-color: #7498FF;
+    color: whitesmoke;
     text-align: center;
     width: 50%;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 #image {
     width: 500px; 
+}
+
+td {
+    color: whitesmoke;
+    background-color: #3C65FF;
+}
+
+a {
+    color: whitesmoke;
 }
 
 .button-85 {

@@ -64,12 +64,12 @@ include_once "MyHeader.php";
             session_start();
             $_SESSION['score'] += $Score;
             ?>
-            getElementById('showAnswer').innerHTML = "That is correct!";
+            document.getElementById('showAnswer').innerHTML = "That is correct!";
             setTimeout(1000);
             location.href = "jsonMulti.php";
         }
         else {
-            getElementById('showAnswer').innerHTML = "That is incorrect! The correct answer was" + correctAnswer;
+            document.getElementById('showAnswer').innerHTML = "That is incorrect! The correct answer was" + correctAnswer;
             setTimeout(1000);
             location.href = "jsonMulti.php";
         }
@@ -86,13 +86,13 @@ include_once "MyHeader.php";
 
         // create a table for display
         //var myReturn = "<table align='center'><tr><td><h1>Name &nbsp;  &nbsp; </h1></td><td><h1>Price &nbsp;  &nbsp; </h1></td></tr>";
-        var myReturn = "<table align='center'><tr><td><h1>Question</h1></td></tr><tr><td><h2>What is...<h2></td></tr>"
 
         myResponse = request.responseText;
         console.log("After setting my response");
         //alert("A: " + myResponse); // Use for debug
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
+        var myReturn = "<table align='center'><tr><td><h1> " + myData[0].Question + "</h1></td></tr><tr><td><h2>What is...<h2></td></tr>"
         console.log("After setting my data");
         correctAnswer = myData[0].CorrectAnswer;
         answers.push(myData[0].CorrectAnswer);
@@ -101,7 +101,7 @@ include_once "MyHeader.php";
         answers.push(myData[0].IncorrectAnswer3);
         shuffle(answers);
 
-        myReturn += "<tr><td><button value='" + answers[0] + "' onclick='checkAnswer(this.value)'>" + answers[0] + "</button></td><td><button value='" + answers[1] + "' onclick='checkAnswer(this.value)'>" + answers[1] + "</button></td></tr><tr><td><button value='" + answers[2] + "' onclick='checkAnswer(this.value)'>" + answers[2] + "</button></td><td><button value='" + answers[3] + "' onclick='checkAnswer(this.value)'>" + answers[3] + "</button></td></tr></table > ";
+        myReturn += "<tr><td><button value='" + answers[0] + "' onclick='checkAnswer(this.value)'>" + answers[0] + "</button></td><tr><td><button value='" + answers[1] + "' onclick='checkAnswer(this.value)'>" + answers[1] + "</button></td></tr><tr><td><button value='" + answers[2] + "' onclick='checkAnswer(this.value)'>" + answers[2] + "</button></td></tr><tr><td><button value='" + answers[3] + "' onclick='checkAnswer(this.value)'>" + answers[3] + "</button></td></tr></table > ";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }
 
