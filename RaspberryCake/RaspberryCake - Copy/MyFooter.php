@@ -7,7 +7,7 @@
 
 <?php
 $CurrentYear = 2022;
-echo "Raspberry Bakery - Copyright The Raspberry Guys " . $CurrentYear;
+echo "Raspberry Jeopardy - Copyright The Raspberry Guys " . $CurrentYear;
 ?>
 
 </body>
